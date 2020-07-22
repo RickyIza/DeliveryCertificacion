@@ -4,9 +4,17 @@ import { ProductoMainComponent } from './components/producto-main/producto-main.
 import { UsuarioMainComponent } from './components/usuario-main/usuario-main.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: '/home',
+    pathMatch: 'full',
+  },
   {path: '', redirectTo: '/', pathMatch: 'full'},
   {path: 'productos', component: ProductoMainComponent},
-  {path: 'usuarios', component: UsuarioMainComponent}
+  {path: 'usuarios', component: UsuarioMainComponent},
+  { path: 'home', loadChildren: () => import('./home/home.module').then(m => m.HomeModule) },
+  { path: 'login', loadChildren: () => import('./auth/login/login.module').then(m => m.LoginModule) },
+  { path: 'register', loadChildren: () => import('./auth/register/register.module').then(m => m.RegisterModule) }
 ];
 
 @NgModule({

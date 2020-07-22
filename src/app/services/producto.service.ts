@@ -9,7 +9,7 @@ import { Observable , of } from 'rxjs';
 })
 export class ProductoService {
 //pones la url pilas pilaaaaaas
-  url : string = "https://localhost:44391/api/Producto";
+  url : string = "https://localhost:44382/api/Producto";
 
   httpOptions={
     headers: new HttpHeaders({
