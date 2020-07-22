@@ -1,0 +1,30 @@
+<div>
+    <div class="text-center">
+        <fa-icon class="fa-2x" [icon]="faListAlt"></fa-icon>
+    </div>
+    <hr>
+    <h5>PRODUCTOS</h5>  
+    <table class="table table-hover">
+        <thead class="bg-info">
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Comentario</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let p of productos">
+                <td>{{p.nombre}}</td>
+                <td>{{p.precio}}</td>
+                <td>{{p.comentario}}</td>
+                <td>{{p.estado}}</td>
+                <td class="btn-group">
+                    <button [routerLink]="['/productos', p.idProducto]" class="btn btn-sm btn-info"><fa-icon [icon]="faEye"></fa-icon></button>
+                    <button class="btn btn-sm btn-warning"><fa-icon [icon]="faPencilAlt"></fa-icon></button>
+                    <button (click)="delete(p)" class="btn btn-sm btn-danger"><fa-icon [icon]="faTrash"></fa-icon></button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
