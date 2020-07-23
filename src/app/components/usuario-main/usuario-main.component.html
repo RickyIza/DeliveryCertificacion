@@ -1,17 +1,11 @@
 <div class="container">
     <br>
-    <div class="page-header">    
-        <h4>Usuarios <small>Operaciones CRUD-L de la entidad Usuarios</small></h4>
+    <div class="page-header" style="text-align: center;">    
+        <h4>Usuarios <small>Lista completa</small></h4>
     </div>
     <hr>
-    <div class="row">    
-        <app-usuario-form [alumno]="mainAlumno" [title]="mainTitle" 
-            (flagToReload)="toReload($event)">
-        </app-usuario-form>
-        <hr>    
-        <app-usuario-list (alumnoToEdit)="toUpdate($event)" 
-            [flagToReload]="mainReload" (reloadComplete)="reloadDone($event)">
-        </app-usuario-list>
+    <div class="row" class="row justify-content-center">      
+        <app-usuario-list></app-usuario-list>
     </div>
     <hr>
     </div>

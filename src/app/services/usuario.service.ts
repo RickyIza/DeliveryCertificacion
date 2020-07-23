@@ -27,6 +27,7 @@ export class UsuarioService {
     }
     return this.http.put<any>(this.url, usuarioBody, this.httpOptions);
   }
+  
   retrieve(id:number): Observable<Usuario> {
     return this.http.get<Usuario>(this.url +"/" +id, this.httpOptions)
       .pipe(

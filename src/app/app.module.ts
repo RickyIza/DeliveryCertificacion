@@ -24,6 +24,8 @@ import { SexdescPipe } from './shared/pipes/sexdesc.pipe';
 import { UsuarioService } from './services/usuario.service';
 import { ServiceInterceptor } from './services/service.interceptor';
 import { UsuarioCardComponent } from './components/usuario-main/usuario-card/usuario-card.component';
+import { RolPipe } from './shared/pipes/rol.pipe';
+import { EstadoPipe } from './shared/pipes/estado.pipe';
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { UsuarioCardComponent } from './components/usuario-main/usuario-card/usu
     ProductoCardComponent,
     MasmaPipe,
     SexdescPipe,
-    UsuarioCardComponent
+    UsuarioCardComponent,
+    RolPipe,
+    EstadoPipe
   ],
   imports: [
     BrowserModule,
