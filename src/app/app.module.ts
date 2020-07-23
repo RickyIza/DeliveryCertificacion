@@ -13,6 +13,8 @@ import { UsuarioFormComponent } from './components/usuario-main/usuario-form/usu
 import { UsuarioListComponent } from './components/usuario-main/usuario-list/usuario-list.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { ProductoCardComponent } from './components/producto-main/producto-card/producto-card.component';
+import { MasmaPipe } from './shared/pipes/masma.pipe';
+import { SexdescPipe } from './shared/pipes/sexdesc.pipe';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { ProductoCardComponent } from './components/producto-main/producto-card/
     ProductoFormComponent,
     ProductoListComponent,
     NavbarComponent,
-    ProductoCardComponent
+    ProductoCardComponent,
+    MasmaPipe,
+    SexdescPipe
   ],
   imports: [
     BrowserModule,

@@ -19,6 +19,14 @@ export class UsuarioService {
     })
   };
   constructor(private http:HttpClient) { }
+
+  save(a:Usuario) : Observable<any> {
+    let usuarioBody = JSON.stringify(a);    
+    if(a.idUsuario=== undefined){      
+      return this.http.post<any>(this.url, usuarioBody, this.httpOptions);
+    }
+    return this.http.put<any>(this.url, usuarioBody, this.httpOptions);
+  }
   retrieve(id:number): Observable<Usuario> {
     return this.http.get<Usuario>(this.url +"/" +id, this.httpOptions)
       .pipe(

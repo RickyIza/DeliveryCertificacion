@@ -3,7 +3,7 @@
       <div class="card">
         <div class="card-body">
           <h1 class="text-center">Acceder</h1>
-          <form>
+          <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
             <div class="form-group">
               <label for="email">Correro eletrónico</label>
               <input type="email" class="form-control" formControlName="email" />
@@ -16,7 +16,7 @@
                 formControlName="password"
               />
             </div>
-            <button class="btn btn-primary btn-lg btn-block">
+            <button type="submit"  class="btn btn-primary btn-lg btn-block">
               Iniciar Sesion
             </button>
           </form>

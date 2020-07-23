@@ -1,1 +1,56 @@
-<p>register works!</p>
+<div class="row">
+    <div class="col-md-6 mx-auto mt-5">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="text-center">Registro</h1>
+          <form>
+            <div class="form-group">
+                <label for="text">Nombre</label>
+                <input type="text" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label for="text">Apellido</label>
+                <input type="text" class="form-control"/>
+            </div>
+            <div class="form-group">
+              <label for="text">Cedula</label>
+              <input type="text" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label for="text">Telefono</label>
+                <input type="text" class="form-control"/>
+              </div>
+              <div class="form-group">
+                <label for="text">Direccion</label>
+                <input type="text" class="form-control"/>
+              </div>
+              <div class="form-group">
+                <label for="email">Correo Electronico</label>
+                <input type="email" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="text">Usuario</label>
+                <input type="text" class="form-control"  />
+              </div>
+            <div class="form-group">
+              <label for="password">Contraseña</label>
+              <input
+                type="password"
+                class="form-control"
+                formControlName="password"
+              />
+            </div>
+            <button class="btn btn-primary btn-lg btn-block">
+              Registrar
+            </button>
+          </form>
+          <div class="form-group mt-3">
+            <p>
+              Tiene usted una cuenta? <a [routerLink]="['/login']"> Iniciar Sesion </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
