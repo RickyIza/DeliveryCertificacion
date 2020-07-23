@@ -23,6 +23,7 @@ import { MasmaPipe } from './shared/pipes/masma.pipe';
 import { SexdescPipe } from './shared/pipes/sexdesc.pipe';
 import { UsuarioService } from './services/usuario.service';
 import { ServiceInterceptor } from './services/service.interceptor';
+import { UsuarioCardComponent } from './components/usuario-main/usuario-card/usuario-card.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { ServiceInterceptor } from './services/service.interceptor';
     NavbarComponent,
     ProductoCardComponent,
     MasmaPipe,
-    SexdescPipe
+    SexdescPipe,
+    UsuarioCardComponent
   ],
   imports: [
     BrowserModule,

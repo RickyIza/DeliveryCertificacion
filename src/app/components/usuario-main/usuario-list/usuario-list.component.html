@@ -16,6 +16,9 @@
                 <th>
                     Cédula
                 </th>          
+                <th>
+                    Rol
+                </th>          
                 <th></th>
             </tr>
         </thead>
@@ -29,6 +32,9 @@
                     </td>
                     <td>
                         {{item.cedula}}
+                    </td>                
+                    <td>
+                        {{item.rol}}
                     </td>                
                     <td class="btn-group">
                         <button [routerLink]="['/usuarios', item.idusuario]"class="btn btn-sm btn-info" ><fa-icon [icon]="faEye"></fa-icon></button>                    
