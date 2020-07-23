@@ -22,6 +22,25 @@ export class UsuarioListComponent implements OnInit {
     this.list();
   }
 
+  delete(u : Usuario) : void{
+    swal.fire({
+      title: '¿Estas seguro que desea continuar?',
+      text: "El usuario: " + u.nombres + " " + u.apellidos + " será eliminado.",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Confirmar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) =>{
+      if(result.value){
+        this.usuarioService.delete(u).subscribe(
+          result => console.log(result)
+        ) 
+      }
+    })
+  }
+
   list() : void {
     this.usuarioService.list().subscribe(result => {      
       this.usuario = result;

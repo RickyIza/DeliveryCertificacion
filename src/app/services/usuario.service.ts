@@ -35,8 +35,7 @@ export class UsuarioService {
   } 
 
   delete(a: Usuario) : Observable<any> {
-    return this.http.delete<Usuario[]>(this.url + '/' + a.idUsuario, 
-      this.httpOptions);
+    return this.http.delete<Usuario[]>(this.url + '/' + a.idUsuario, this.httpOptions);
   }
 
   list(): Observable<Usuario[]> {

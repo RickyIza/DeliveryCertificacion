@@ -24,6 +24,25 @@ export class ProductoListComponent implements OnInit {
     
   }
 
+  delete(p : Producto) : void{
+    swal.fire({
+      title: '¿Estas seguro que desea continuar?',
+      text: "El producto: " + p.nombre + " será eliminado.",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Confirmar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) =>{
+      if(result.value){
+        this.productoService.delete(p).subscribe(
+          result => console.log(result)
+        ) 
+      }
+    })
+  }
+
   list() : void{
     this.productoService.list().subscribe(result => {
       this.productos = result;
