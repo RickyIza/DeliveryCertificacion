@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Producto } from 'src/app/models/producto';
 import { ProductoService } from 'src/app/services/producto.service';
 import { ActivatedRoute } from '@angular/router';
-import { faUser,faHotdog, faMoneyBillAlt, faBookmark, faGenderless } from '@fortawesome/free-solid-svg-icons';
+import { faHotdog, faMoneyBillAlt, faBookmark, faGenderless } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-producto-card',
@@ -11,7 +11,6 @@ import { faUser,faHotdog, faMoneyBillAlt, faBookmark, faGenderless } from '@fort
 })
 export class ProductoCardComponent implements OnInit {
 
-  faUser=faUser;
   faHotdog = faHotdog;
   faMoneyBillAlt = faMoneyBillAlt;
   faBookmark = faBookmark;

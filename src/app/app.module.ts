@@ -15,6 +15,7 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
 import { ProductoCardComponent } from './components/producto-main/producto-card/producto-card.component';
 import { MasmaPipe } from './shared/pipes/masma.pipe';
 import { SexdescPipe } from './shared/pipes/sexdesc.pipe';
+import { UsuarioCardComponent } from './components/usuario-main/usuario-card/usuario-card.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { SexdescPipe } from './shared/pipes/sexdesc.pipe';
     NavbarComponent,
     ProductoCardComponent,
     MasmaPipe,
-    SexdescPipe
+    SexdescPipe,
+    UsuarioCardComponent
   ],
   imports: [
     BrowserModule,
