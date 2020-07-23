@@ -12,6 +12,7 @@ import { UsuarioMainComponent } from './components/usuario-main/usuario-main.com
 import { UsuarioFormComponent } from './components/usuario-main/usuario-form/usuario-form.component';
 import { UsuarioListComponent } from './components/usuario-main/usuario-list/usuario-list.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
+import { ProductoCardComponent } from './components/producto-main/producto-card/producto-card.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { NavbarComponent } from './shared/navbar/navbar.component';
     ProductoMainComponent,
     ProductoFormComponent,
     ProductoListComponent,
-    NavbarComponent
+    NavbarComponent,
+    ProductoCardComponent
   ],
   imports: [
     BrowserModule,
