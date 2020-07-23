@@ -25,7 +25,7 @@ export class UsuarioListComponent implements OnInit {
   delete(u : Usuario) : void{
     swal.fire({
       title: '¿Estas seguro que desea continuar?',
-      text: "El usuario: " + u.nombres + " " + u.apellidos + " será eliminado.",
+      text: "El usuario: " + u.nombre + " " + u.apellido + " será eliminado.",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',

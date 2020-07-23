@@ -5,13 +5,9 @@
     </div>
     <hr>
     <div class="row">    
-        <app-usuario-form [alumno]="mainAlumno" [title]="mainTitle" 
-            (flagToReload)="toReload($event)">
-        </app-usuario-form>
+        <app-usuario-form></app-usuario-form>
         <hr>    
-        <app-usuario-list (alumnoToEdit)="toUpdate($event)" 
-            [flagToReload]="mainReload" (reloadComplete)="reloadDone($event)">
-        </app-usuario-list>
+        <app-usuario-list></app-usuario-list>
     </div>
     <hr>
     </div>

@@ -1,7 +1,7 @@
 export class Usuario {
     idUsuario:number;
-    nombres :string;
-    apellidos :string;
+    nombre :string;
+    apellido :string;
     cedula: string;
     telefono: string;
     direccion: string;   
