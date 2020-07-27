@@ -1,14 +1,15 @@
-import {Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { faUserPlus, faIdCard, faSave, faTimes, faUser, faCalendar, faMapMarkedAlt, faGenderless } from '@fortawesome/free-solid-svg-icons';
+import { Usuario } from 'src/app/models/usuario';
 import { UsuarioService } from 'src/app/services/usuario.service';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms'
-import { Usuario } from 'src/app/models/usuario';
 
 @Component({
   selector: 'app-usuario-form',
-  templateUrl: './usuario-form.component.html',
+  templateUrl: './usuario-form.component.html'  
 })
 export class UsuarioFormComponent implements OnInit {
+
   faUserPlus =faUserPlus;
   faIdCard = faIdCard;
   faSave = faSave;
@@ -29,15 +30,15 @@ export class UsuarioFormComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      nombres: ['', [Validators.required]],
-      apellidos: ['', [Validators.required]],
       cedula: ['', [Validators.required, Validators.minLength(10)]],
-      telefono: [''],
+      nombre: ['', [Validators.required]],
+      apellido: ['', [Validators.required]],
       direccion: [''],
-      contraseña: [''],
+      telefono: [''],
+      contrasena: [''],
       usuario1: [''],
-      rol: ['',[Validators.maxLength(1)]],  
-      correo: [''],    
+      correo: [''],
+      rol: ['',[Validators.maxLength(1)]],      
     });
   }
 

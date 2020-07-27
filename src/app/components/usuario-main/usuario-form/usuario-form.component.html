@@ -19,7 +19,6 @@
                     <div *ngIf="f.cedula.errors.required">La cédula es requerida</div>
                     <div *ngIf="f.cedula.errors.minlength">La cédula debe tener mínimo 10 caracteres</div>
                 </div>
-    
             </div>          
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
@@ -46,37 +45,37 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text"><fa-icon [icon]='faCalendar'></fa-icon></span>
                 </div>
-                <input formControlName="telefono" type="date" class="form-control form-control-user" 
-                    [(ngModel)]="usuario.telefono" />
+                <input formControlName="telefono" type="text" class="form-control form-control-user" 
+                    [(ngModel)]="usuario.telefono"/>
             </div>        
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text"><fa-icon [icon]='faMapMarkedAlt'></fa-icon></span>
                 </div>
                 <input formControlName="direccion" type="text" class="form-control form-control-user" 
-                    [(ngModel)]="usuario.direccion" placeholder="Dirección" />
+                    [(ngModel)]="usuario.direccion" placeholder="Dirección"/>
+            </div> 
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><fa-icon [icon]='faMapMarkedAlt'></fa-icon></span>
+                </div>
+                <input formControlName="contrasena" type="text" class="form-control form-control-user" 
+                    [(ngModel)]="usuario.contrasena" placeholder="Contraseña"/>
+            </div> 
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><fa-icon [icon]='faMapMarkedAlt'></fa-icon></span>
+                </div>
+                <input formControlName="usuario1" type="text" class="form-control form-control-user" 
+                    [(ngModel)]="usuario.usuario1" placeholder="Usuario"/>
             </div> 
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text"><fa-icon [icon]='faMapMarkedAlt'></fa-icon></span>
                 </div>
                 <input formControlName="correo" type="text" class="form-control form-control-user" 
-                    [(ngModel)]="usuario.correo" placeholder="Correo" />
-            </div>            
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><fa-icon [icon]='faMapMarkedAlt'></fa-icon></span>
-                </div>
-                <input formControlName="usuario1" type="text" class="form-control form-control-user" 
-                    [(ngModel)]="usuario.usuario1" placeholder="Usuario" />
-            </div>            
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><fa-icon [icon]='faMapMarkedAlt'></fa-icon></span>
-                </div>
-                <input formControlName="contrasena" type="text" class="form-control form-control-user" 
-                    [(ngModel)]="usuario.contrasena" placeholder="Contraseña" />
-            </div>            
+                    [(ngModel)]="usuario.correo" placeholder="Correo"/>
+            </div> 
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text"><fa-icon [icon]='faGenderless'></fa-icon></span>
@@ -84,8 +83,8 @@
                 <select formControlName="rol" [(ngModel)]="usuario.rol" 
                     [ngClass]="{'is-invalid': submitted && f.rol.errors }" 
                     class="form-control form-control-user">
-                    <option value="C">Cliente</option>
-                    <option value="A">Administrador</option>              
+                    <option value="A">Administrador</option>
+                    <option value="C">Cliente</option>                
                 </select>            
             </div>         
     
@@ -99,3 +98,4 @@
             </div>
         </div>        
     </form>
+</div>
