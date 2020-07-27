@@ -7,6 +7,6 @@ export class Usuario {
     direccion: string;   
     contrasena: string;
     usuario1: string;
-    rol: string = "C";
+    rol: string;
     correo: string;
 }

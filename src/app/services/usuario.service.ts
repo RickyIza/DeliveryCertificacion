@@ -20,9 +20,9 @@ export class UsuarioService {
   };
   constructor(private http:HttpClient) { }
 
-  save(a:Usuario) : Observable<any> {
-    let usuarioBody = JSON.stringify(a);    
-    if(a.idUsuario=== undefined){      
+  save(u:Usuario) : Observable<any> {
+    let usuarioBody = JSON.stringify(u);    
+    if(u.idUsuario=== undefined){      
       return this.http.post<any>(this.url, usuarioBody, this.httpOptions);
     }
     return this.http.put<any>(this.url, usuarioBody, this.httpOptions);
@@ -35,8 +35,8 @@ export class UsuarioService {
       );
   } 
 
-  delete(a: Usuario) : Observable<any> {
-    return this.http.delete<Usuario[]>(this.url + '/' + a.idUsuario, this.httpOptions);
+  delete(u: Usuario) : Observable<any> {
+    return this.http.delete<Usuario[]>(this.url + '/' + u.idUsuario, this.httpOptions);
   }
 
   list(): Observable<Usuario[]> {
