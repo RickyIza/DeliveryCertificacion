@@ -18,31 +18,33 @@ export class UsuarioService {
       'Accept': 'application/json'      
     })
   };
+
   constructor(private http:HttpClient) { }
 
-  save(a:Usuario) : Observable<any> {
-    let usuarioBody = JSON.stringify(a);    
-    if(a.idUsuario=== undefined){      
+  save(u : Usuario) : Observable<any> {
+    let usuarioBody = JSON.stringify(u);    
+    if(u.idUsuario === undefined){      
       return this.http.post<any>(this.url, usuarioBody, this.httpOptions);
     }
     return this.http.put<any>(this.url, usuarioBody, this.httpOptions);
   }
-  
+
   retrieve(id:number): Observable<Usuario> {
-    return this.http.get<Usuario>(this.url +"/" +id, this.httpOptions)
+    return this.http.get<Usuario>(this.url + "/" + id, this.httpOptions)
       .pipe(
-        retry(1)   
+        retry(1)
       );
   } 
 
   delete(a: Usuario) : Observable<any> {
-    return this.http.delete<Usuario[]>(this.url + '/' + a.idUsuario, this.httpOptions);
+    return this.http.delete<any>(this.url + '/' + a.idUsuario, 
+      this.httpOptions);
   }
 
   list(): Observable<Usuario[]> {
     return this.http.get<Usuario[]>(this.url, this.httpOptions)
       .pipe(
-        retry(1)   
+        retry(1)
       );
   } 
 }
