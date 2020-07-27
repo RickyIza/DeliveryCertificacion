@@ -22,9 +22,9 @@ export class UsuarioService {
   constructor(private http:HttpClient) { }
 
 
-  save(u : Usuario) : Observable<any> {
-    let usuarioBody = JSON.stringify(u);    
-    if(u.idUsuario === undefined){      
+  save(a : Usuario) : Observable<any> {
+    let usuarioBody = JSON.stringify(a);    
+    if(a.idUsuario === undefined){      
       return this.http.post<any>(this.url, usuarioBody, this.httpOptions);
     }
     return this.http.put<any>(this.url, usuarioBody, this.httpOptions);
