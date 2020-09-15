@@ -11,19 +11,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductoMainComponent } from './components/producto-main/producto-main.component';
-import { ProductoFormComponent } from './components/producto-main/producto-form/producto-form.component';
-import { ProductoListComponent } from './components/producto-main/producto-list/producto-list.component';
 import { UsuarioMainComponent } from './components/usuario-main/usuario-main.component';
-import { UsuarioFormComponent } from './components/usuario-main/usuario-form/usuario-form.component';
 import { UsuarioListComponent } from './components/usuario-main/usuario-list/usuario-list.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
-import { ProductoCardComponent } from './components/producto-main/producto-card/producto-card.component';
 import { MasmaPipe } from './shared/pipes/masma.pipe';
 
 import { UsuarioService } from './services/usuario.service';
-import { ServiceInterceptor } from './services/service.interceptor';
-import { UsuarioCardComponent } from './components/usuario-main/usuario-card/usuario-card.component';
 import { RolPipe } from './shared/pipes/rol.pipe';
 import { EstadoPipe } from './shared/pipes/estado.pipe';
 
@@ -32,18 +25,11 @@ import { EstadoPipe } from './shared/pipes/estado.pipe';
   declarations: [
     AppComponent,
     UsuarioMainComponent,
-    UsuarioFormComponent,
     UsuarioListComponent,
-    ProductoMainComponent,
-    ProductoFormComponent,
-    ProductoListComponent,
     NavbarComponent,
-    ProductoCardComponent,
     MasmaPipe,
-    UsuarioCardComponent,
     RolPipe,
-    EstadoPipe,    
-    UsuarioCardComponent
+    EstadoPipe
   ],
   imports: [
     BrowserModule,
@@ -53,11 +39,6 @@ import { EstadoPipe } from './shared/pipes/estado.pipe';
     ReactiveFormsModule  
   ],
   providers: [
-    UsuarioService, {
-      provide: HTTP_INTERCEPTORS,
-      useClass: ServiceInterceptor,
-      multi: true
-    },
     {
       provide: LOCALE_ID,
       useValue : 'es-EC'

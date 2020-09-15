@@ -1,51 +1,26 @@
-<div>
-    <div class="text-center">
-        <fa-icon class="fa-2x" [icon]="faListAlt"></fa-icon>    
-    </div>
-    <hr>  
+<div class="container">
+    <h1>Listado<small>Usuarios</small></h1>
     <table class="table table-hover">
         <thead class="bg-info">
             <tr>
-                <th>
-                    Nombres
-                </th>
-                <th>
-                    Apellidos
-                </th>
-                <th>
-                    Cédula
-                </th>          
-                <th>
-                    Rol
-                </th>          
-                <th>
-                </th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Cédula</th>
+                <th>Dirección</th>
             </tr>
         </thead>
-        <tbody>        
-                <tr *ngFor="let item of usuario">
-                    <td>
-                        {{item.nombre}}
-                    </td>
-                    <td>
-                        {{item.apellido}}
-                    </td>
-                    <td>
-                        {{item.cedula}}
-                    </td>                
-                    <td>
-                        {{item.rol}}
-                    </td>                
-                    <td class="btn-group">
-                        <button [routerLink]="['/usuarios', item.idUsuario]"class="btn btn-sm btn-info" ><fa-icon [icon]="faEye"></fa-icon></button>                    
-                        <button class="btn btn-sm btn-warning" ><fa-icon [icon]="faPencilAlt"></fa-icon></button>
-                        <button (click)="delete(item)" class="btn btn-sm btn-danger" ><fa-icon [icon]="faTrash"></fa-icon></button>
-                    </td>
-                </tr>
-            
+        <tbody>
+            <tr *ngFor = "let item of usuarios">
+                <td>{{item.nombre}}</td>
+                <td>{{item.apellido}}</td>
+                <td>{{item.cedula}}</td>
+                <td>{{item.direccion}}</td>
+                <td class="btn-group">
+                    <button class="btn btn-sm btn-info"><fa-icon [icon]="faEye"></fa-icon></button>
+                    <button class="btn btn-sm btn-warning"><fa-icon [icon]="faPencilAlt"></fa-icon></button>
+                    <button class="btn btn-sm btn-danger"><fa-icon [icon]="faTrash"></fa-icon></button>
+                </td>
+            </tr>
         </tbody>
     </table>
-    </div>
-    
-    
-    
+</div>
